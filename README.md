@@ -1,56 +1,83 @@
-# SMS Spam Detection
+# SMS Spam Detection System
 
-## Overview
-SMS Spam Detection is a machine learning model that takes an SMS as input and predicts whether the message is a spam or not spam message. The model is built using Python and deployed on the web using Streamlit.
+## Introduction  
+The SMS Spam Detection System leverages machine learning to identify whether an incoming SMS is spam or legitimate. Designed using Python and deployed via Streamlit, this solution is both efficient and user-friendly, making it accessible for a wide range of applications.  
 
-## Technology Used
-- Python
-- Scikit-learn
-- Pandas
-- NumPy
-- Streamlit
+---
 
-## Features
-- Data collection
-- Data cleaning and preprocessing
-- Exploratory Data Analysis
-- Model building and selection
-- Web deployment using Streamlit
+## Key Highlights  
 
-### Data Collection
-The SMS Spam Collection dataset was collected from Kaggle, which contains over 5,500 SMS messages labeled as either spam or not spam.
-You can access the dataset from [here](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)
+### Tools and Libraries  
+- **Programming Language**: Python  
+- **Libraries Used**: Scikit-learn, Pandas, NumPy, and Streamlit  
 
-### Data Cleaning and Preprocessing
-The data was cleaned by handling null and duplicate values, and the "type" column was label-encoded. The data was then preprocessed by converting the text into tokens, removing special characters, stop words and punctuation, and stemming the data. The data was also converted to lowercase before preprocessing.
+### Core Features  
+1. **Data Collection**: Integrates a labeled dataset of SMS messages.  
+2. **Text Processing**: Applies advanced natural language processing (NLP) techniques for message cleaning and transformation.  
+3. **Modeling**: Incorporates multiple machine learning algorithms to identify the most accurate classifier.  
+4. **Web Interface**: User-friendly web app for real-time predictions.  
 
-### Exploratory Data Analysis
-Exploratory Data Analysis was performed to gain insights into the dataset. The count of characters, words, and sentences was calculated for each message. The correlation between variables was also calculated, and visualizations were created using pyplots, bar charts, pie charts, 5 number summaries, and heatmaps. Word clouds were also created for spam and non-spam messages, and the most frequent words in spam texts were visualized.
+---
 
-### Model Building and Selection
-Multiple classifier models were tried, including NaiveBayes, random forest, KNN, decision tree, logistic regression, ExtraTreesClassifier, and SVC. The best classifier was chosen based on precision, with a precision of 100% achieved.
+## Dataset Overview  
+The SMS Spam Collection dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset), consists of 5,500+ messages labeled as either spam or legitimate.  
 
-### Web Deployment
-The model was deployed on the web using Streamlit. The user interface has a simple input box where the user can input a message, and the model will predict whether it is spam or not spam.
+### Data Preparation  
+1. **Cleaning**: Removed duplicates, addressed missing values, and standardized text by converting it to lowercase.  
+2. **Preprocessing**:  
+   - Tokenization: Breaking down messages into individual words.  
+   - Removal: Eliminated stop words, special characters, and punctuation.  
+   - Stemming: Reduced words to their root forms.  
 
-## Demo
-To try out the SMS Spam Detection model, visit [here](https://textsafe.streamlit.app/).
+---
 
-## Usage
-To use the SMS Spam Detection model on your own machine, follow these steps:
+## Insights Through Data Analysis  
+Comprehensive exploratory data analysis (EDA) was conducted to understand the characteristics of the dataset:  
+- **Textual Metrics**: Analyzed word count, character count, and sentence length distributions.  
+- **Visualization**: Utilized bar charts, pie charts, and heatmaps for insights.  
+- **Word Clouds**: Generated word clouds for spam and legitimate messages, highlighting frequently used terms.  
 
-+ Clone this repository.
-+ Install the required Python packages using 
-```
-pip install -r requirements.txt.
-```
-+ Run the model using 
-```
-streamlit run app.py.
-```
-+ Visit localhost:8501 on your web browser to access the web app.
+---
 
-## Contributions
-Contributions to this project are welcome. If you find any issues or have any suggestions for improvement, please open an issue or a pull request on this repository.
+## Machine Learning Approach  
+Various classifiers were evaluated for performance, including:  
+- Naive Bayes  
+- Random Forest  
+- K-Nearest Neighbors (KNN)  
+- Decision Trees  
+- Logistic Regression  
+- Extra Trees Classifier  
+- Support Vector Classifier (SVC)  
 
+The model with the highest precision (achieving 100%) was selected for deployment.  
+
+---
+
+## Deployment with Streamlit  
+The SMS Spam Detection model is deployed as an interactive web app using Streamlit. Users can input an SMS into the app's interface, and the system will instantly classify it as spam or legitimate.  
+
+### Live Demo  
+Try the web app [here](https://textsafe.streamlit.app/).  
+
+---
+
+## How to Use Locally  
+Follow these steps to run the project on your local machine:  
+1. Clone the repository.  
+2. Install the required dependencies:  
+   ```bash  
+   pip install -r requirements.txt  
+   ```  
+3. Launch the app:  
+   ```bash  
+   streamlit run app.py  
+   ```  
+4. Open your browser and navigate to `localhost:8501`.  
+
+---
+
+## Contribute  
+We welcome contributions to improve this project! Feel free to:  
+- Open issues for bugs or feature requests.  
+- Submit pull requests with enhancements or fixes.  
 
