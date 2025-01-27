@@ -56,8 +56,7 @@ The model with the highest precision (achieving 100%) was selected for deploymen
 ## Deployment with Streamlit  
 The SMS Spam Detection model is deployed as an interactive web app using Streamlit. Users can input an SMS into the app's interface, and the system will instantly classify it as spam or legitimate.  
 
-### Live Demo  
-Try the web app [here](https://textsafe.streamlit.app/).  
+ 
 
 ---
 
